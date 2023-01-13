@@ -9,40 +9,48 @@
 /*Attributi basic per contenitore numeri*/
 
 .basic {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
+    color: white;
+    font-size: 100px;
 }
 
 /*Attributi box*/
 
 #First-box {
     background-color: red;
-    top: 10%;
-    left: 10%;
+    top: 54%;
+    left: 44%;
 }
+
 #Second-box {
-    background-color: white;
-    top: 10%;
-    left: 10%;
+    background-color: black;
+    top: 71%;
+    left: 9%;
 }
+
 #Third-box {
     background-color: yellow;
-    top: 10%;
-    left: 10%;
+    top: 32%;
+    left: 76%;
+    color: black;
 }
+
 #Fourth-box {
     background-color: green;
-    top: 10%;
-    left: 10%;
+    top: 2%;
+    left: 50%;
 }
+
 #Fifth-box {
     background-color: blueviolet;
-    top: 10%;
+    top: 21%;
     left: 10%;
+    color: black;
 }
 
