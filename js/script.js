@@ -53,16 +53,119 @@ boxCinque.innerHTML = boxNumbers[4];
 
 // Verifiche box
 
-console.log('Box uno:', boxUno)
-console.log('Box due:', boxDue)
-console.log('Box tre:', boxTre)
-console.log('Box quattro:', boxQuattro)
-console.log('Box cinque', boxCinque)
+console.log('Box yellow:', boxUno)
+console.log('Box pink:', boxDue)
+console.log('Box orange:', boxTre)
+console.log('Box blue:', boxQuattro)
+console.log('Box purple', boxCinque)
 
 // 3.)
 // 3.a) Dopo 30 secondi i numeri scompaiono
 
+setTimeout(function () {
 
+    boxUno.innerHTML = '?';
+    boxDue.innerHTML = '?';
+    boxTre.innerHTML = '?';
+    boxQuattro.innerHTML = '?';
+    boxCinque.innerHTML = '?';
+
+}, 30000);
+
+// 3.a) Dopo 31 secondi compare alert TIME OUT
+
+setTimeout(function () {
+
+    alert('TIME OUT');
+
+}, 31000);
+
+// 3.a) Dopo 32 secondi compaiono i prompt
+
+
+setTimeout(function () {
+
+    let orange = parseInt(prompt('Inserisci il numero del box arancione'));
+    console.log('Blocco arancione:', orange);
+    if (isNaN(orange)) {
+        alert('Puoi inserire solo numeri')
+        let orange = parseInt(prompt('Inserisci il numero del box arancione'));
+        console.log('Blocco arancione:', orange);
+
+    }
+
+    let blue = parseInt(prompt('Inserisci il numero del box blu'));
+    console.log('Blocco blu:', blue);
+    if (isNaN(blue)) {
+        alert('Puoi inserire solo numeri')
+        let blue = parseInt(prompt('Inserisci il numero del box blu'));
+        console.log('Blocco blu:', blue);
+
+    }
+
+    let pink = parseInt(prompt('Inserisci il numero del box rosa'));
+    console.log('Blocco rosa:', pink);
+    if (isNaN(pink)) {
+        alert('Puoi inserire solo numeri')
+        let pink = parseInt(prompt('Inserisci il numero del box rosa'));
+        console.log('Blocco rosa:', pink);
+
+    }
+
+    let purple = parseInt(prompt('Inserisci il numero del box viola'));
+    console.log('Blocco viola:', purple );
+    if (isNaN(purple)) {
+        alert('Puoi inserire solo numeri')
+        let purple = parseInt(prompt('Inserisci il numero del box viola'));
+        console.log('Blocco viola:', purple );
+
+    }
+
+    let yellow = parseInt(prompt('Inserisci il numero del box giallo'));
+    console.log('Blocco giallo:', yellow);
+    if (isNaN(yellow)) {
+        alert('Puoi inserire solo numeri')
+        let yellow = parseInt(prompt('Inserisci il numero del box giallo'));
+        console.log('Blocco giallo:', yellow);
+    }
+
+    verifica(yellow, boxNumbers[0], boxUno) //verifica box
+    verifica(pink, boxNumbers[1], boxDue) //verifica box
+    verifica(orange, boxNumbers[2], boxTre) //verifica box
+    verifica(blue, boxNumbers[3], boxQuattro) //verifica box
+    verifica(purple, boxNumbers[4], boxCinque) //verifica box
+
+    setTimeout(function () {
+
+        alert("Il tuo punteggio è: " + '' + score + '')
+    
+    }, 2000);
+
+
+
+}, 32000);
+
+// Creo funzione per ripete if quando necessito
+
+let score = 0;
+
+function verifica(numUtente, arraycasuale, box) {
+
+    if(numUtente == arraycasuale) {
+
+        score = score + 1;
+        box.classList.add('corretto');
+        console.log('punteggio', score)
+
+        
+
+    } else {
+        box.classList.add('scorretto');
+        
+    }
+
+
+}
 
 
 
