@@ -41,15 +41,11 @@ let megaBox = [boxUno, boxDue, boxTre, boxQuattro, boxCinque];
 
 /*----------------------Funzione per assegnare elementi al dom ----------------------------------*/
 
-let j = 0;
 
 for (let i = 0; i <= 4; i++) {
 
-    megaBox[j].innerHTML = boxNumbers[j];
+    megaBox[i].innerHTML = boxNumbers[i];
 
-    j = j + 1;
-
-    conso
     
 }
 
@@ -58,13 +54,11 @@ for (let i = 0; i <= 4; i++) {
 
 setTimeout(function () {
     
-    j = 0;
 
     for (let i = 0; i <= 4; i++) {
 
-        megaBox[j].innerHTML = '?';
+        megaBox[i].innerHTML = '?';
     
-        j = j + 1;
         
     }
 
